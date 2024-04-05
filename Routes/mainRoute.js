@@ -11,8 +11,8 @@ const KEY=process.env.KEY
 
 
 // const multer=require("multer")
-const dest1=trimStringFromWords(__dirname,"Desktop","Users","users")
-const dest=`${dest1}/uploads`
+// const dest1=trimStringFromWords(__dirname,"Desktop","Users","users")
+const dest=`./uploads`
 console.log(dest)
 
 

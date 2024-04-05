@@ -20,9 +20,9 @@ const usersM=(req,res)=>{
 
 
 const homeM=async(req,res)=>{
-const pat=trimStringFromWords(__dirname,"Desktop","users","Users")
-const data1=await getFilesInDirectory(`${pat}/uploads`)
+// const pat=trimStringFromWords(__dirname,"Desktop","users","Users")
 console.log("i am home")  
+const data1=await getFilesInDirectory(`./uploads`)
 
 res.render("home",{data:data1});
 }
