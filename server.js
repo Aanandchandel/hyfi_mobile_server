@@ -39,10 +39,10 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json());
 app.set("view engine", "ejs");
 // Error handling middleware (optional)
-// app.use((err, req, res, next) => {
-  //   console.error(err.stack);
-  //   res.status(500).send("Something went wrong!");
-  // });
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send("Something went wrong!");
+  });
   // const path =require("path")
   
   app.use(mainRoutes); // Define routes

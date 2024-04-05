@@ -39,8 +39,10 @@ route.get("/",chackCookies,homeM)
 route.get("/upload",chackCookies,uploadM)
 
 route.get('/download', function(req, res) {
-  const filename=req.query.name
-  const filePath = `${dest}/${filename}`; // Replace this with the path to your file
+  const filename = req.query.name;
+  const filePath = `${dest}/${filename}`; 
+
+  // Attempt to download the file
   res.download(filePath, filename, function(err) {
       if (err) {
           // Handle error, if any
@@ -48,10 +50,10 @@ route.get('/download', function(req, res) {
           res.status(500).send('Internal Server Error');
       } else {
           console.log('File download successful');
-          
       }
   });
 });
+
 
 route.get('/logout', logOutM);
 route.get("/login",loginM)
