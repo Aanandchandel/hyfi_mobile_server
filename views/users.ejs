@@ -1,0 +1,15 @@
+<%- include('header') %>
+<h1>Users</h1>
+<ol style="background-color:  white;
+padding: 1rem; 
+padding-left: 1.5rem;
+ height: auto; display: flex;
+flex-direction: column; 
+color: black;
+gap: 1rem;">
+    <% data.forEach(user=> { %>
+      <li><%= user.name %><button style="margin-left:1rem ;"><%=user.Ip%></button > </li>
+    <% }); %>
+  </ol>
+
+<%- include('footer') %>

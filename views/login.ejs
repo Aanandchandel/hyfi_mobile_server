@@ -1,10 +1,21 @@
 <%- include('header') %>
 <div id="logindiv">
 
-    <form id="login" action="">
-        <input type="text" placeholder="name">
-        <input type="password" placeholder="password">
+    <form id="login"  action="/login"  method="post">
+        <input type="text" placeholder="name" name="name">
+        <input name="password" type="password"  placeholder="password">
         <input type="submit" placeholder="submit">
     </form>
 </div>
+<script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket=io()
+        socket.on('message',(message)=>{
+            console.log(message)
+            socket.emit("hii","i have recived a message ")
+
+
+
+        })
+    </script>
 <%- include('footer') %>

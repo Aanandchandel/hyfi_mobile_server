@@ -1,14 +1,16 @@
 <%- include('header') %>
 <div id="upload">
-<form action="" >
     
-    
-    <h1>Select Files</h1>
-    
-    <input type="file" multiple>
-    <button type="submit">Submit</button>
+    <form action="/upload" name="files" method="post" enctype="multipart/form-data">
+        
+        
+        
+        <h1>Select Files</h1>
+        
+        <input type="file" name="files" multiple >
+        <input type="submit">
+    </form>
 
-</form>
 
 </div>
 
