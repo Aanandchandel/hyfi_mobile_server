@@ -34,8 +34,8 @@ catch(error){
 
 const checkUserJsonFile=(req,res,next)=>{
 
-    const filePat=trimStringFromWord(__dirname,"hyfi")
-    const filePath = path.join(filePat, "data.json");
+    // const filePat=trimStringFromWord(__dirname,"hyfi")
+    const filePath = "./data.json"
 
     fs.access(filePath, fs.constants.F_OK, (err) => {
         if (err) {
