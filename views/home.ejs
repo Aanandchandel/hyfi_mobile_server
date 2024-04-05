@@ -3,7 +3,7 @@
     
     <ol>
         <% data.forEach(file => { %>
-          <li><%= file.name %><button>Download</button></li>
+          <li><%= file.name %><a href="/download?name=<%=file.name %>">Download</a></li>
         <% }); %>
       </ol>
     <%- include('footer')%>

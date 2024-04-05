@@ -38,6 +38,20 @@ route.post("/upload",upload.array("files"),function (req, res) {
 route.get("/",chackCookies,homeM)
 route.get("/upload",chackCookies,uploadM)
 
+route.get('/download', function(req, res) {
+  const filename=req.query.name
+  const filePath = `${dest}/${filename}`; // Replace this with the path to your file
+  res.download(filePath, filename, function(err) {
+      if (err) {
+          // Handle error, if any
+          console.error('Error downloading file:', err);
+          res.status(500).send('Internal Server Error');
+      } else {
+          console.log('File download successful');
+          
+      }
+  });
+});
 
 route.get('/logout', logOutM);
 route.get("/login",loginM)
