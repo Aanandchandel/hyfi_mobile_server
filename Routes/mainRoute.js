@@ -32,7 +32,7 @@ const upload = multer({ storage: storage })
 route.post("/upload",upload.array("files"),function (req, res) {
   console.log(req.files)
   console.log(req.body)
-  res.send("kjsdhfksafkh")});
+  res.send("done")});
 
 
 route.get("/",chackCookies,homeM)
